@@ -1,0 +1,58 @@
+.my-drawer {
+    background-color: $background-1;
+    color: #ffffff;
+
+    .mdc-drawer__header {
+        margin: 1rem 0;
+
+        .wrapper {
+            display: flex;
+            height: 80px;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0 0 5px 16px;
+
+            .logo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .mdc-drawer__title {
+                color: #ffffff;
+                margin: 0 0 0 1rem;
+            }
+        }
+    }
+
+    .mdc-list {
+        .mdc-list-item {
+            text-transform: uppercase;
+            color: $navbar-text !important;
+            transition: color 0.4s ease 0s;
+            padding-left: 32px;
+        }
+
+        .mdc-list-item:hover {
+            color: $navbar-text-hover !important;
+            transition: color 0.4s ease 0s;
+        }
+    
+        .mdc-list-item:hover::before,
+        .mdc-list-item:hover::after,
+        .mdc-list-item:focus::before,
+        .mdc-list-item:focus::after,
+        .mdc-list-item:active::before,
+        .mdc-list-item:active::after {
+            opacity: 0 !important;
+        }
+    
+        .mdc-list-item.active {
+            color: $primary !important;
+        }
+
+        .mdc-list-item::before, .mdc-list-item::after {
+            opacity: 0 !important;
+        }
+    }
+}
