@@ -1,4 +1,7 @@
 
+// Custom Fonts
+@import 'fonts';
+
 // Variables
 @import 'variables';
 
@@ -9,9 +12,11 @@
 @import "@material/layout-grid/mdc-layout-grid";
 @import "@material/drawer/mdc-drawer";
 @import "@material/list/mdc-list";
+@import "@material/react-button/index.scss";
 
 // Custom
 @import 'style';
 @import 'components/navbar';
 @import 'components/drawer';
 @import 'components/sections';
+@import 'components/banner';

@@ -12,7 +12,7 @@ export default class NavigationDrawer extends Component {
                 <div className="mdc-drawer__header">
                     <div className="wrapper">
                         <img src={logo} className="logo" alt="AS" />
-                        <h3 className="mdc-drawer__title">Alessandro Staffolani</h3>
+                        {/* <h3 className="mdc-drawer__title">Alessandro Staffolani</h3> */}
                     </div>
                 </div>
                 <div className="mdc-drawer__content">

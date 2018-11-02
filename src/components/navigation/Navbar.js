@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from '../../images/logo-white.png';
 import TopAppBar from '@material/react-top-app-bar';
 import MaterialIcon from '@material/react-material-icon';
 import { routes } from '../../routes/routes';
@@ -10,6 +9,9 @@ import NavigationDrawer from './NavigationDrawer';
 export default class Navbar extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            cssClass: 'navbar-transparent'
+        };
         this.drawer = null;
 
         this.toggleDrawer = this.toggleDrawer.bind(this);
@@ -18,6 +20,7 @@ export default class Navbar extends Component {
 
     componentDidMount() {
         this.drawer = null;
+        window.addEventListener('scroll', this.handleScroll);
     }
 
     setDrawerRef(drawer) {
@@ -35,7 +38,21 @@ export default class Navbar extends Component {
         e.preventDefault();
         this.drawer.open = false;
         this.props.handleBlockChange(e, blockName);
-    }
+    };
+
+    handleScroll = () => {
+        const { cssClass } = this.state;
+        let scrollPosition = window.scrollY;
+        if (scrollPosition <= 300) {
+            if (cssClass !== 'navbar-transparent') {
+                this.setState({ cssClass: 'navbar-transparent' });
+            }
+        } else {
+            if (cssClass !== 'navbar-colored') {
+                this.setState({ cssClass: 'navbar-colored' });
+            }
+        }
+    };
 
     render() {
         const { currentPage, currentBlock, handlePageChange, handleBlockChange } = this.props;
@@ -55,17 +72,12 @@ export default class Navbar extends Component {
             <div>
                 <TopAppBar
                     title=""
-                    className="mdc-elevation--z4 navbar-transparent"
+                    className={"mdc-elevation--z4 " + this.state.cssClass}
                     navigationIcon={<MaterialIcon icon="menu" onClick={() => this.toggleDrawer()} />}
                     actionItems={navLinks}
                 />
-                <NavigationDrawer
-                    currentPage={currentPage}
-                    currentBlock={currentBlock}
-                    setRef={this.setDrawerRef}
-                    handleLinkClick={this.handleLinkClick}
-                />
-                <div className="mdc-drawer-scrim"></div>
+                <NavigationDrawer currentPage={currentPage} currentBlock={currentBlock} setRef={this.setDrawerRef} handleLinkClick={this.handleLinkClick} />
+                <div className="mdc-drawer-scrim" />
             </div>
         );
     }

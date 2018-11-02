@@ -16,21 +16,11 @@ body {
 }
 
 .font-1 {
-    font: normal normal normal 65px/1.4em lulo-clean-w01-one-bold,sans-serif;
-    font-weight: bold;
-    letter-spacing: 10px;
     margin: 0;
 }
 
 .font-3 {
-    font: normal normal normal 24px/1.4em avenir-lt-w01_35-light1475496,sans-serif;
-    font-weight: 300;
-    letter-spacing: 5px;
     margin: 0;
-}
-
-.font-8 {
-    font: normal normal normal 15px/1.4em avenir-lt-w01_35-light1475496,sans-serif;
 }
 
 .image {
@@ -39,4 +29,73 @@ body {
 
 .uppercase {
     text-transform: uppercase;
+}
+
+.btn-primary {
+    border: 1px solid $primary !important;
+    border-radius: 0;
+    --mdc-ripple-fg-opacity: 0 !important;
+    color: #ffffff !important;
+    font-weight: 300;
+    padding: 18px 30px;
+    height: auto;
+
+    &:hover, &:focus, &:active {
+        background-color: $primary !important;
+    }
+
+    &.mdc-button::before, &.mdc-button::after {
+        background-color: transparent !important;
+    }
+}
+
+@media only screen and (min-width: mdc-layout-grid-breakpoint-min('desktop')) {
+    /* Styles for desktop only */
+    .font-1 {
+        font: normal normal normal 50px/1.4em LuloCleanOneBold,sans-serif;
+    }
+
+    .font-3 {
+        font: normal normal normal 22px/1.4em Avenir,sans-serif;
+        letter-spacing: 5px;
+    }
+
+    .font-8 {
+        font: normal normal normal 15px/1.4em Avenir,sans-serif;
+        line-height: 2.3rem;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: mdc-layout-grid-breakpoint-max('tablet')) {
+    /* Styles for tablet only */
+    .font-1 {
+        font: normal normal normal 46px/1.4em LuloCleanOneBold,sans-serif;
+    }
+
+    .font-3 {
+        font: normal normal normal 23px/1.4em Avenir,sans-serif;
+        letter-spacing: 3px;
+    }
+
+    .font-8 {
+        font: normal normal normal 15px/1.4em Avenir,sans-serif;
+        line-height: 2.3rem;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    /* Styles for mobile only */
+    .font-1 {
+        font: normal normal normal 30px/1.4em LuloCleanOneBold,sans-serif;
+    }
+
+    .font-3 {
+        font: normal normal normal 15px/1.4em Avenir,sans-serif;
+        letter-spacing: 2px;
+    }
+
+    .font-8 {
+        font: normal normal normal 13px/1.4em Avenir,sans-serif;
+        line-height: 2rem;
+    }
 }

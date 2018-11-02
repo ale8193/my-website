@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import background from '../../images/alessandro_staffolani.png';
 import { Parallax } from 'react-scroll-parallax';
-import logoWhite from '../../images/logo-white.png';
 
-export default class HeroBanner extends Component {
+export default class HeroSection extends Component {
     render() {
         return (
             <Parallax className="section hero-banner" offsetYMax={50} offsetYMin={-50} slowerScrollRate tag="section">
@@ -25,19 +23,6 @@ export default class HeroBanner extends Component {
                         {/* <div className="image-container">
                             <img src={background} className="section-background" alt="Alessandro Staffolani" />
                         </div> */}
-                    </div>
-                </div>
-                <div className="logo-banner">
-                    <div className="logo-wrapper">
-                        <img src={logoWhite} className="logo image" alt="Logo" />
-                    </div>
-                    <div className="banner-content uppercase font-8 text-white">
-                        Accomplished software engineer specializing in object-oriented approaches to network and platform development with thorough hands-on
-                        experience in all levels of testing, including performance, functional, integration and user acceptance testing. Supportive and
-                        enthusiastic team player dedicated to streamlining process and efficiently resolving project issues.
-                    </div>
-                    <div className="action-wrapper">
-                        <button>Download Resume</button>
                     </div>
                 </div>
             </Parallax>

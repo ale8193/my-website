@@ -1,6 +1,4 @@
 .hero-banner {
-    height: 100vh;
-    max-height: $section-one-max-height;
     position: relative;
 
     &::before {
@@ -28,12 +26,12 @@
         display: flex;
         justify-content: center;
         align-content: center;
-        align-items: center;
+        /* align-items: center; */
 
         .section-content {
             width: 100%;
             text-align: center;
-            margin: auto;
+            margin: 230px auto 0 auto;
 
             .text-wrapper {
                 display: inline-block;
@@ -57,77 +55,50 @@
             }
         }
     }
+}
 
-    .logo-banner {
-        margin: 0 auto;
-        background-color: rgba(51, 59, 80, 1);
+.second-section {
+    height: 120vh;
+    max-height: $section-one-max-height;
+    position: relative;
 
-        .logo-wrapper {
-            text-align: center;
-
-            .logo {
-                object-fit: cover;
-            }
-        }
-
-        .banner-content {
-            text-align: center;
-        }
-
-        .action-wrapper {
-            text-align: center;
-        }
+    &::before {
+        opacity: 0.3;
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: url('/images/alessandro_staffolani_workdesk.png') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
     }
 }
 
 @media only screen and (min-width: mdc-layout-grid-breakpoint-min('desktop')) {
     /* Styles for desktop only */
     .hero-banner {
-        .logo-banner {
-            width: 800px;
-            padding: 50px;
-
-            .logo-wrapper {
-
-                .logo {
-                    width: 176px;
-                    height: 176px;
-                }
-            }
-        }
+        height: 120vh;
+        max-height: $section-one-max-height;
     }
 }
 
 @media only screen and (min-width: 600px) and (max-width: mdc-layout-grid-breakpoint-max('tablet')) {
     /* Styles for tablet only */
     .hero-banner {
-        .logo-banner {
-            width: 500px;
-
-            .logo-wrapper {
-
-                .logo {
-                    width: 176px;
-                    height: 176px;
-                }
-            }
-        }
+        height: 100vh;
+        max-height: $section-one-max-height;
     }
 }
 
 @media only screen and (max-width: 599px) {
     /* Styles for mobile only */
     .hero-banner {
-        .logo-banner {
-            width: 100%;
-
-            .logo-wrapper {
-
-                .logo {
-                    width: 176px;
-                    height: 176px;
-                }
-            }
-        }
+        height: 100vh;
+        max-height: $section-one-max-height;
     }
 }

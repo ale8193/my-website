@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
-import './css/App.css';
-import Navbar from './components/navigation/Navbar';
 import { routes } from './routes/routes';
-import HeroBanner from './components/sections/HeroBanner';
-import { ParallaxProvider } from 'react-scroll-parallax';
+import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
+
+// Components
+import Navbar from './components/navigation/Navbar';
+import HeroSection from './components/sections/HeroSection';
+import CVBanner from './components/banners/CVBanner';
+
+// Style
+import './css/App.css';
 
 class App extends Component {
     constructor(props) {
@@ -37,8 +42,12 @@ class App extends Component {
                         handlePageChange={this.handlePageChange}
                         handleBlockChange={this.handleBlockChange}
                     />
-                    <HeroBanner />
-                    <div style={{ height: '1000px' }} />
+                    <HeroSection />
+                    <CVBanner />
+                    <Parallax className="section second-section" offsetYMax={50} offsetYMin={-50} slowerScrollRate tag="section">
+                        
+                    </Parallax>
+                    <div style={{ height: '1000px', backgroundColor: '#e3e3e3' }} />
                 </div>
             </ParallaxProvider>
         );
