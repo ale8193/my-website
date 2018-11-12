@@ -4,7 +4,7 @@ import { Parallax } from 'react-scroll-parallax';
 export default class HeroSection extends Component {
     render() {
         return (
-            <Parallax className="section hero-banner" offsetYMax={50} offsetYMin={-50} slowerScrollRate tag="section">
+            <Parallax className="section hero-section" offsetYMax={50} offsetYMin={-50} slowerScrollRate tag="section">
                 <div className="section-wrapper">
                     <div className="section-content text-white">
                         <div className="text-wrapper">

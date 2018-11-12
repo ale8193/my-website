@@ -19,7 +19,15 @@ body {
     margin: 0;
 }
 
+.font-2 {
+    margin: 0;
+}
+
 .font-3 {
+    margin: 0;
+}
+
+.font-9 {
     margin: 0;
 }
 
@@ -29,6 +37,10 @@ body {
 
 .uppercase {
     text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .btn-primary {
@@ -49,10 +61,18 @@ body {
     }
 }
 
+.text-color-25 {
+    color: $color-25 !important;
+}
+
 @media only screen and (min-width: mdc-layout-grid-breakpoint-min('desktop')) {
     /* Styles for desktop only */
     .font-1 {
         font: normal normal normal 50px/1.4em LuloCleanOneBold,sans-serif;
+    }
+
+    .font-2 {
+        font: normal normal normal 41px/1.4em LuloCleanOneBold,sans-serif;
     }
 
     .font-3 {
@@ -64,12 +84,22 @@ body {
         font: normal normal normal 15px/1.4em Avenir,sans-serif;
         line-height: 2.3rem;
     }
+
+    .font-9 {
+        font: normal normal normal 14px/1.4em Avenir,sans-serif;
+        line-height: 1rem;
+        font-weight: 400;
+    }
 }
 
 @media only screen and (min-width: 600px) and (max-width: mdc-layout-grid-breakpoint-max('tablet')) {
     /* Styles for tablet only */
     .font-1 {
         font: normal normal normal 46px/1.4em LuloCleanOneBold,sans-serif;
+    }
+
+    .font-2 {
+        font: normal normal normal 40px/1.4em LuloCleanOneBold,sans-serif;
     }
 
     .font-3 {
@@ -81,12 +111,22 @@ body {
         font: normal normal normal 15px/1.4em Avenir,sans-serif;
         line-height: 2.3rem;
     }
+
+    .font-9 {
+        font: normal normal normal 14px/1.4em Avenir,sans-serif;
+        line-height: 1rem;
+        font-weight: 400;
+    }
 }
 
 @media only screen and (max-width: 599px) {
     /* Styles for mobile only */
     .font-1 {
         font: normal normal normal 30px/1.4em LuloCleanOneBold,sans-serif;
+    }
+
+    .font-2 {
+        font: normal normal normal 26px/1.4em LuloCleanOneBold,sans-serif;
     }
 
     .font-3 {
@@ -97,5 +137,11 @@ body {
     .font-8 {
         font: normal normal normal 13px/1.4em Avenir,sans-serif;
         line-height: 2rem;
+    }
+
+    .font-9 {
+        font: normal normal normal 14px/1.4em Avenir,sans-serif;
+        line-height: 1rem;
+        font-weight: 400;
     }
 }

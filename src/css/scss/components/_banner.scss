@@ -1,13 +1,28 @@
 
+.banner-section-wrapper {
+    position: relative;
+}
+
 .section-banner {
     background-color: transparent;
     position: absolute;
     width: 100%;
     z-index: 2;
 
-    .logo-banner {
+    &.cv-banner {
+        .banner-wrapper {
+            background-color: rgba(51, 59, 80, 1);
+        }
+    }
+
+    &.professional-banner {
+        .banner-wrapper {
+            background-color: transparent;
+        }
+    }
+
+    .banner-wrapper {
         margin: 0 auto;
-        background-color: rgba(51, 59, 80, 1);
 
         .logo-wrapper {
             text-align: center;
@@ -35,7 +50,17 @@
             top: 780px;
         }
 
-        .logo-banner {
+        &.professional-banner {
+            top: 600px;
+
+            .banner-wrapper {
+                .font-2 {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        .banner-wrapper {
             width: 740px;
             padding: 50px;
 
@@ -62,7 +87,11 @@
             top: 740px;
         }
 
-        .logo-banner {
+        &.professional-banner {
+            top: 500px;
+        }
+
+        .banner-wrapper {
             width: 500px;
             padding: 30px;
 
@@ -89,7 +118,11 @@
             top: 730px;
         }
 
-        .logo-banner {
+        &.professional-banner {
+            top: 500px;
+        }
+
+        .banner-wrapper {
             width: 100%;
             padding: 30px 0;
 

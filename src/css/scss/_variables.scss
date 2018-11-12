@@ -5,6 +5,12 @@ $background-1: #313b52 !default;
 $background-2: #2f415a !default;
 
 $primary: #00D646 !default;
+$color-25: #BEC7D5 !default;
+
+$mdc-theme-primary: $primary;
+/* $mdc-theme-secondary: #feeae6; */
+$mdc-theme-on-primary: #ffffff !default;
+/* $mdc-theme-on-secondary: #442b2d; */
 
 $navbar-text: rgba(169, 175, 184, 0.6) !default;
 $navbar-text-hover: #BEC7D5 !default;

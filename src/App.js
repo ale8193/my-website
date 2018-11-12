@@ -5,7 +5,9 @@ import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 // Components
 import Navbar from './components/navigation/Navbar';
 import HeroSection from './components/sections/HeroSection';
+import ProfessionalSection from './components/sections/ProfessionalSection';
 import CVBanner from './components/banners/CVBanner';
+import ProfessionalBanner from './components/banners/ProfessionalBanner';
 
 // Style
 import './css/App.css';
@@ -42,11 +44,10 @@ class App extends Component {
                         handlePageChange={this.handlePageChange}
                         handleBlockChange={this.handleBlockChange}
                     />
-                    <HeroSection />
                     <CVBanner />
-                    <Parallax className="section second-section" offsetYMax={50} offsetYMin={-50} slowerScrollRate tag="section">
-                        
-                    </Parallax>
+                    <HeroSection />
+                    <ProfessionalBanner />
+                    <ProfessionalSection />
                     <div style={{ height: '1000px', backgroundColor: '#e3e3e3' }} />
                 </div>
             </ParallaxProvider>
