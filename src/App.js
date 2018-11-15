@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { routes } from './routes/routes';
-import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
+import { ParallaxProvider } from 'react-scroll-parallax';
+import { getScreenType, BREAKPOINTS } from './utils/screenUtils';
 
 // Components
 import Navbar from './components/navigation/Navbar';
@@ -17,14 +18,32 @@ class App extends Component {
         super(props);
         this.state = {
             currentPage: routes.home.code,
-            currentBlock: routes.home.code
+            currentBlock: routes.home.code,
+            screenType: getScreenType(),
         };
+    }
+
+    componentDidMount() {
+        window.addEventListener("resize", this.updateScreenType);
+    }
+
+    updateScreenType = () => {
+        this.setState({screenType: getScreenType()})
     }
 
     handleBlockChange = (e, block) => {
         e.preventDefault();
         this.setState({ currentBlock: block });
-        // TODO: Scroll to block
+        const jQuery = window.jQuery;
+        const target = jQuery(`#${block}`);
+        if (target.length) {
+            jQuery('html, body').animate(
+                {
+                    scrollTop: target.offset().top
+                },
+                1000
+            );
+        }
     };
 
     handlePageChange = (e, page) => {
@@ -46,7 +65,7 @@ class App extends Component {
                     />
                     <CVBanner />
                     <HeroSection />
-                    <ProfessionalBanner />
+                    <ProfessionalBanner screenType={this.state.screenType} />
                     <ProfessionalSection />
                     <div style={{ height: '1000px', backgroundColor: '#e3e3e3' }} />
                 </div>

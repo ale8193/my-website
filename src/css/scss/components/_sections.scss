@@ -51,7 +51,7 @@
     position: relative;
 
     &::before {
-        opacity: 0.3;
+        opacity: 0.5;
         content: '';
         position: absolute;
         z-index: -1;
@@ -92,7 +92,7 @@
     }
 
     .professional-section {
-        height: 160vh;
+        height: 115vh;
         max-height: 1388px;
     }
 }
@@ -102,5 +102,10 @@
     .hero-section {
         height: 100vh;
         max-height: $section-one-max-height;
+    }
+
+    .professional-section {
+        height: 156vh;
+        max-height: 1388px;
     }
 }

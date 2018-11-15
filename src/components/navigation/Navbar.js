@@ -69,7 +69,7 @@ export default class Navbar extends Component {
         ));
 
         return (
-            <div>
+            <div id="home">
                 <TopAppBar
                     title=""
                     className={"mdc-elevation--z4 " + this.state.cssClass}
