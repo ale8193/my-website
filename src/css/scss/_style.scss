@@ -27,7 +27,15 @@ body {
     margin: 0;
 }
 
+.font-5 {
+    margin: 0;
+}
+
 .font-9 {
+    margin: 0;
+}
+
+.font-11 {
     margin: 0;
 }
 
@@ -80,6 +88,11 @@ body {
         letter-spacing: 5px;
     }
 
+    .font-5 {
+        font: normal normal normal 18px/1.4em Avenir,sans-serif;
+        letter-spacing: 3px;
+    }
+
     .font-8 {
         font: normal normal normal 15px/1.4em Avenir,sans-serif;
         line-height: 2.3rem;
@@ -87,6 +100,12 @@ body {
 
     .font-9 {
         font: normal normal normal 14px/1.4em Avenir,sans-serif;
+        line-height: 1rem;
+        font-weight: 400;
+    }
+
+    font-11 {
+        font: normal normal normal 13px/1.4em Avenir,sans-serif;
         line-height: 1rem;
         font-weight: 400;
     }
@@ -107,6 +126,11 @@ body {
         letter-spacing: 3px;
     }
 
+    .font-5 {
+        font: normal normal normal 16px/1.4em Avenir,sans-serif;
+        letter-spacing: 3px;
+    }
+
     .font-8 {
         font: normal normal normal 15px/1.4em Avenir,sans-serif;
         line-height: 2.3rem;
@@ -114,6 +138,12 @@ body {
 
     .font-9 {
         font: normal normal normal 14px/1.4em Avenir,sans-serif;
+        line-height: 1rem;
+        font-weight: 400;
+    }
+
+    font-11 {
+        font: normal normal normal 12px/1.4em Avenir,sans-serif;
         line-height: 1rem;
         font-weight: 400;
     }
@@ -134,12 +164,23 @@ body {
         letter-spacing: 2px;
     }
 
+    .font-5 {
+        font: normal normal normal 14px/1.4em Avenir,sans-serif;
+        letter-spacing: 3px;
+    }
+
     .font-8 {
         font: normal normal normal 13px/1.4em Avenir,sans-serif;
         line-height: 2rem;
     }
 
     .font-9 {
+        font: normal normal normal 12px/1.4em Avenir,sans-serif;
+        line-height: 1rem;
+        font-weight: 400;
+    }
+
+    font-11 {
         font: normal normal normal 12px/1.4em Avenir,sans-serif;
         line-height: 1rem;
         font-weight: 400;

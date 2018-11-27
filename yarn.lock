@@ -941,12 +941,12 @@
     prop-types "^15.6.1"
     react "^16.4.2"
 
-"@material/react-material-icon@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@material/react-material-icon/-/react-material-icon-0.5.0.tgz#0711c264c6136709fef3ebe4b02521a64325823b"
-  integrity sha512-x9vLDLNhDDZBNY6I8tW1MDFa9hAdmgh/qDBB0CpoggPw9z5iNCN4spxPEBOHj6Y+Kf0+d7frQqUrNpPery9kpA==
+"@material/react-material-icon@^0.6.2":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@material/react-material-icon/-/react-material-icon-0.6.2.tgz#8ad8a6665a4b0559aabbe478a9892ae3158dfc11"
+  integrity sha512-a5/RCGdHOx4uwlA5mvzXT8BJ/RkElZNVoD645FywR3iZ4QAAJ5ROUeVxcFbLp4TF25EuMiVTzHZRTCDltH3Wjw==
   dependencies:
-    "@material/react-ripple" "^0.5.0"
+    "@material/react-ripple" "^0.6.2"
     classnames "^2.2.5"
     prop-types "^15.6.1"
     react "^16.4.2"
@@ -965,6 +965,16 @@
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/@material/react-ripple/-/react-ripple-0.6.1.tgz#caa61dff42bf9281ea223a296550917f5c8b7d88"
   integrity sha512-LHYKwd/TiWA+Py5wzcxEnf5ofCFIBz57AKKJJv+4MfIPYPOAyCSoZZMOL51zfmG9Mkq9lqxEySxuM3lb9ciQSA==
+  dependencies:
+    "@material/ripple" "^0.40.1"
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+    react "^16.4.2"
+
+"@material/react-ripple@^0.6.2":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@material/react-ripple/-/react-ripple-0.6.2.tgz#94c3c0e16c9bc772a0b6482a34655b1e31e00a05"
+  integrity sha512-CakPq/NvYfFtEWq+2oAEc2//mTbK3bjGstu2Ro4kDsINTtwqSsWf9bcphGW8S9LcvvojFWIMK1StuXtmyWxZIA==
   dependencies:
     "@material/ripple" "^0.40.1"
     classnames "^2.2.5"

@@ -5,8 +5,11 @@ import { getScreenType, BREAKPOINTS } from './utils/screenUtils';
 
 // Components
 import Navbar from './components/navigation/Navbar';
+// Sections
 import HeroSection from './components/sections/HeroSection';
 import ProfessionalSection from './components/sections/ProfessionalSection';
+import BackgroundSection from './components/sections/BackgroundSection';
+// Banners/
 import CVBanner from './components/banners/CVBanner';
 import ProfessionalBanner from './components/banners/ProfessionalBanner';
 
@@ -67,6 +70,7 @@ class App extends Component {
                     <HeroSection />
                     <ProfessionalBanner screenType={this.state.screenType} />
                     <ProfessionalSection />
+                    <BackgroundSection />
                     <div style={{ height: '1000px', backgroundColor: '#e3e3e3' }} />
                 </div>
             </ParallaxProvider>

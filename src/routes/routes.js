@@ -13,16 +13,16 @@ export const routes = {
         title: 'My professional',
         page: 'home'
     },
-    experience: {
-        label: 'Experience',
-        code: 'experience',
-        title: 'My experience',
-        page: 'home'
-    },
     portfolio: {
         label: 'Portfolio',
         code: 'portfolio',
         title: 'My portfolio',
+        page: 'home'
+    },
+    experience: {
+        label: 'Experience',
+        code: 'experience',
+        title: 'My experience',
         page: 'home'
     },
     contact: {

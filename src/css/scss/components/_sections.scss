@@ -71,6 +71,22 @@
     }
 }
 
+.background-section {
+    position: relative;
+
+    &::before {
+        opacity: 1;
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #324158;
+    }
+}
+
 @media only screen and (min-width: mdc-layout-grid-breakpoint-min('desktop')) {
     /* Styles for desktop only */
     .hero-section {
@@ -81,6 +97,10 @@
     .professional-section {
         height: 160vh;
         max-height: 1388px;
+    }
+
+    .background-section {
+        padding: 200px 60px;
     }
 }
 
@@ -95,6 +115,10 @@
         height: 115vh;
         max-height: 1388px;
     }
+
+    .background-section {
+        padding: 200px 50px;
+    }
 }
 
 @media only screen and (max-width: 599px) {
@@ -107,5 +131,9 @@
     .professional-section {
         height: 156vh;
         max-height: 1388px;
+    }
+
+    .background-section {
+        padding: 200px 30px;
     }
 }

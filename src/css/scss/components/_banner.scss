@@ -21,6 +21,19 @@
         }
     }
 
+    &.portfolio-banner {
+        position: static;
+
+        .banner-body {
+            margin-top: 50px;
+        }
+    }
+
+    &.experience-banner {
+        position: static;
+        margin: 120px 0 300px 0;
+    }
+
     .banner-wrapper {
         margin: 0 auto;
 

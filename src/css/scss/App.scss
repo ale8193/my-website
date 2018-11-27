@@ -7,6 +7,7 @@
 
 // Material components
 @import "@material/react-top-app-bar/index";
+@import '@material/react-material-icon/index.scss';
 @import "@material/ripple/mdc-ripple";
 @import "@material/elevation/mdc-elevation";
 @import "@material/layout-grid/mdc-layout-grid";
@@ -21,3 +22,4 @@
 @import 'components/sections';
 @import 'components/banner';
 @import 'components/skill';
+@import 'components/work';

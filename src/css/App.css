@@ -329,6 +329,65 @@
   .mdc-ripple-surface--test-edge-var-bug::before {
     border: var(--mdc-ripple-surface-test-edge-var); }
 
+.material-icons--ripple-surface {
+  --mdc-ripple-fg-size: 0;
+  --mdc-ripple-left: 0;
+  --mdc-ripple-top: 0;
+  --mdc-ripple-fg-scale: 1;
+  --mdc-ripple-fg-translate-end: 0;
+  --mdc-ripple-fg-translate-start: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  will-change: transform, opacity; }
+  .material-icons--ripple-surface::before, .material-icons--ripple-surface::after {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    content: ""; }
+  .material-icons--ripple-surface::before {
+    transition: opacity 15ms linear, background-color 15ms linear;
+    z-index: 1; }
+  .material-icons--ripple-surface.mdc-ripple-upgraded::before {
+    transform: scale(var(--mdc-ripple-fg-scale, 1)); }
+  .material-icons--ripple-surface.mdc-ripple-upgraded::after {
+    top: 0;
+    /* @noflip */
+    left: 0;
+    transform: scale(0);
+    transform-origin: center center; }
+  .material-icons--ripple-surface.mdc-ripple-upgraded--unbounded::after {
+    top: var(--mdc-ripple-top, 0);
+    /* @noflip */
+    left: var(--mdc-ripple-left, 0); }
+  .material-icons--ripple-surface.mdc-ripple-upgraded--foreground-activation::after {
+    animation: 225ms mdc-ripple-fg-radius-in forwards, 75ms mdc-ripple-fg-opacity-in forwards; }
+  .material-icons--ripple-surface.mdc-ripple-upgraded--foreground-deactivation::after {
+    animation: 150ms mdc-ripple-fg-opacity-out;
+    transform: translate(var(--mdc-ripple-fg-translate-end, 0)) scale(var(--mdc-ripple-fg-scale, 1)); }
+  .material-icons--ripple-surface::before, .material-icons--ripple-surface::after {
+    top: calc(50% - 100%);
+    /* @noflip */
+    left: calc(50% - 100%);
+    width: 200%;
+    height: 200%; }
+  .material-icons--ripple-surface.mdc-ripple-upgraded::after {
+    width: var(--mdc-ripple-fg-size, 100%);
+    height: var(--mdc-ripple-fg-size, 100%); }
+  .material-icons--ripple-surface::before, .material-icons--ripple-surface::after {
+    background-color: #000; }
+  .material-icons--ripple-surface:hover::before {
+    opacity: 0.04; }
+  .material-icons--ripple-surface:not(.mdc-ripple-upgraded):focus::before, .material-icons--ripple-surface.mdc-ripple-upgraded--background-focused::before {
+    transition-duration: 75ms;
+    opacity: 0.12; }
+  .material-icons--ripple-surface:not(.mdc-ripple-upgraded)::after {
+    transition: opacity 150ms linear; }
+  .material-icons--ripple-surface:not(.mdc-ripple-upgraded):active::after {
+    transition-duration: 75ms;
+    opacity: 0.16; }
+  .material-icons--ripple-surface.mdc-ripple-upgraded {
+    --mdc-ripple-fg-opacity: 0.16; }
+
 .mdc-ripple-surface {
   --mdc-ripple-fg-size: 0;
   --mdc-ripple-left: 0;
@@ -1928,7 +1987,13 @@ body {
 .font-3 {
   margin: 0; }
 
+.font-5 {
+  margin: 0; }
+
 .font-9 {
+  margin: 0; }
+
+.font-11 {
   margin: 0; }
 
 .image {
@@ -1965,11 +2030,18 @@ body {
   .font-3 {
     font: normal normal normal 22px/1.4em Avenir,sans-serif;
     letter-spacing: 5px; }
+  .font-5 {
+    font: normal normal normal 18px/1.4em Avenir,sans-serif;
+    letter-spacing: 3px; }
   .font-8 {
     font: normal normal normal 15px/1.4em Avenir,sans-serif;
     line-height: 2.3rem; }
   .font-9 {
     font: normal normal normal 14px/1.4em Avenir,sans-serif;
+    line-height: 1rem;
+    font-weight: 400; }
+  font-11 {
+    font: normal normal normal 13px/1.4em Avenir,sans-serif;
     line-height: 1rem;
     font-weight: 400; } }
 
@@ -1982,11 +2054,18 @@ body {
   .font-3 {
     font: normal normal normal 20px/1.4em Avenir,sans-serif;
     letter-spacing: 3px; }
+  .font-5 {
+    font: normal normal normal 16px/1.4em Avenir,sans-serif;
+    letter-spacing: 3px; }
   .font-8 {
     font: normal normal normal 15px/1.4em Avenir,sans-serif;
     line-height: 2.3rem; }
   .font-9 {
     font: normal normal normal 14px/1.4em Avenir,sans-serif;
+    line-height: 1rem;
+    font-weight: 400; }
+  font-11 {
+    font: normal normal normal 12px/1.4em Avenir,sans-serif;
     line-height: 1rem;
     font-weight: 400; } }
 
@@ -1999,10 +2078,17 @@ body {
   .font-3 {
     font: normal normal normal 15px/1.4em Avenir,sans-serif;
     letter-spacing: 2px; }
+  .font-5 {
+    font: normal normal normal 14px/1.4em Avenir,sans-serif;
+    letter-spacing: 3px; }
   .font-8 {
     font: normal normal normal 13px/1.4em Avenir,sans-serif;
     line-height: 2rem; }
   .font-9 {
+    font: normal normal normal 12px/1.4em Avenir,sans-serif;
+    line-height: 1rem;
+    font-weight: 400; }
+  font-11 {
     font: normal normal normal 12px/1.4em Avenir,sans-serif;
     line-height: 1rem;
     font-weight: 400; } }
@@ -2192,6 +2278,19 @@ body {
   .professional-section .section-content {
     margin: 430px auto 0 auto; }
 
+.background-section {
+  position: relative; }
+  .background-section::before {
+    opacity: 1;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #324158; }
+
 @media only screen and (min-width: 840px) {
   /* Styles for desktop only */
   .hero-section {
@@ -2199,7 +2298,9 @@ body {
     max-height: 1088px; }
   .professional-section {
     height: 160vh;
-    max-height: 1388px; } }
+    max-height: 1388px; }
+  .background-section {
+    padding: 200px 60px; } }
 
 @media only screen and (min-width: 600px) and (max-width: 839px) {
   /* Styles for tablet only */
@@ -2208,7 +2309,9 @@ body {
     max-height: 1088px; }
   .professional-section {
     height: 115vh;
-    max-height: 1388px; } }
+    max-height: 1388px; }
+  .background-section {
+    padding: 200px 50px; } }
 
 @media only screen and (max-width: 599px) {
   /* Styles for mobile only */
@@ -2217,7 +2320,9 @@ body {
     max-height: 1088px; }
   .professional-section {
     height: 156vh;
-    max-height: 1388px; } }
+    max-height: 1388px; }
+  .background-section {
+    padding: 200px 30px; } }
 
 .banner-section-wrapper {
   position: relative; }
@@ -2231,6 +2336,13 @@ body {
     background-color: #333b50; }
   .section-banner.professional-banner .banner-wrapper {
     background-color: transparent; }
+  .section-banner.portfolio-banner {
+    position: static; }
+    .section-banner.portfolio-banner .banner-body {
+      margin-top: 50px; }
+  .section-banner.experience-banner {
+    position: static;
+    margin: 120px 0 300px 0; }
   .section-banner .banner-wrapper {
     margin: 0 auto; }
     .section-banner .banner-wrapper .logo-wrapper {
@@ -2293,9 +2405,23 @@ body {
     .section-banner .banner-wrapper .banner-content {
       padding: 20px; } }
 
+.skill-help-test {
+  margin-top: 20px; }
+
 .skill-wrapper {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+  opacity: 1;
+  height: 32px;
+  transition: height 0.8s cubic-bezier(0.9, 0.13, 0.28, 0.76), opacity 0.8s cubic-bezier(0.9, 0.13, 0.28, 0.76);
+  -webkit-transition: height 0.8s cubic-bezier(0.9, 0.13, 0.28, 0.76), opacity 0.8s cubic-bezier(0.9, 0.13, 0.28, 0.76);
+  -moz-transition: height 0.8s cubic-bezier(0.9, 0.13, 0.28, 0.76), opacity 0.8s cubic-bezier(0.9, 0.13, 0.28, 0.76);
+  -o-transition: height 0.8s cubic-bezier(0.9, 0.13, 0.28, 0.76), opacity 0.8s cubic-bezier(0.9, 0.13, 0.28, 0.76); }
   .skill-wrapper .skill-name {
     text-align: right; }
   .skill-wrapper .skill-value {
@@ -2312,47 +2438,133 @@ body {
         -webkit-transition: width 1.8s cubic-bezier(0.9, 0.13, 0.28, 0.76);
         -moz-transition: width 1.8s cubic-bezier(0.9, 0.13, 0.28, 0.76);
         -o-transition: width 1.8s cubic-bezier(0.9, 0.13, 0.28, 0.76);
-        background-color: #00D646;
-        height: 100%; }
+        background-color: rgba(0, 214, 70, 0.9);
+        height: 100%;
+        cursor: pointer; }
+        .skill-wrapper .skill-value .progress-bar .bar:hover {
+          background-color: #00D646; }
         .skill-wrapper .skill-value .progress-bar .bar .skill-percentage {
           transition: opacity 2s cubic-bezier(0.9, 0.13, 0.28, 0.76);
           opacity: 1;
           text-align: right; }
 
+.skill-container {
+  transition: height 0.8s cubic-bezier(0.9, 0.13, 0.28, 0.76), opacity 0.8s cubic-bezier(0.9, 0.13, 0.28, 0.76);
+  -webkit-transition: height 0.8s cubic-bezier(0.9, 0.13, 0.28, 0.76), opacity 0.8s cubic-bezier(0.9, 0.13, 0.28, 0.76);
+  -moz-transition: height 0.8s cubic-bezier(0.9, 0.13, 0.28, 0.76), opacity 0.8s cubic-bezier(0.9, 0.13, 0.28, 0.76);
+  -o-transition: height 0.8s cubic-bezier(0.9, 0.13, 0.28, 0.76), opacity 0.8s cubic-bezier(0.9, 0.13, 0.28, 0.76);
+  height: 32px;
+  position: relative; }
+  .skill-container.not-visible {
+    opacity: 0;
+    height: 0;
+    margin: 0; }
+
+.skill-detail-wrapper {
+  width: calc(100% - 60px);
+  padding: 50px 30px 30px 30px;
+  position: relative;
+  opacity: 1;
+  height: 100%;
+  transition: height 2s cubic-bezier(0.9, 0.13, 0.28, 0.76), opacity 2s cubic-bezier(0.9, 0.13, 0.28, 0.76);
+  -webkit-transition: height 2s cubic-bezier(0.9, 0.13, 0.28, 0.76), opacity 2s cubic-bezier(0.9, 0.13, 0.28, 0.76);
+  -moz-transition: height 2s cubic-bezier(0.9, 0.13, 0.28, 0.76), opacity 2s cubic-bezier(0.9, 0.13, 0.28, 0.76);
+  -o-transition: height 2s cubic-bezier(0.9, 0.13, 0.28, 0.76), opacity 2s cubic-bezier(0.9, 0.13, 0.28, 0.76); }
+  .skill-detail-wrapper.closed {
+    opacity: 0;
+    height: 0;
+    padding: 0; }
+    .skill-detail-wrapper.closed .vertical-bar .bar {
+      height: 0 !important; }
+  .skill-detail-wrapper .sub-skill {
+    display: inline-block;
+    text-align: center; }
+  .skill-detail-wrapper .close-sub-skill {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    color: #BEC7D5; }
+    .skill-detail-wrapper .close-sub-skill:hover {
+      color: #ffffff; }
+  .skill-detail-wrapper .skill-detail .sub-skills-wrapper {
+    margin: 30px 20px;
+    display: flex;
+    justify-content: center; }
+    .skill-detail-wrapper .skill-detail .sub-skills-wrapper .sub-skill {
+      height: 260px;
+      width: 100px; }
+      .skill-detail-wrapper .skill-detail .sub-skills-wrapper .sub-skill .vertical-bar {
+        height: 100%;
+        max-height: 80%;
+        margin-bottom: 15px;
+        position: relative; }
+        .skill-detail-wrapper .skill-detail .sub-skills-wrapper .sub-skill .vertical-bar .skill-percentage {
+          position: absolute;
+          left: 50%;
+          top: -20px;
+          width: 40px;
+          transform: translate(-50%, 0%); }
+        .skill-detail-wrapper .skill-detail .sub-skills-wrapper .sub-skill .vertical-bar .bar {
+          width: 12px;
+          background-color: #009EDC;
+          margin: 0 auto;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%, 0%);
+          cursor: auto;
+          transition: height 2.5s cubic-bezier(0.9, 0.13, 0.28, 0.76);
+          -webkit-transition: height 2.5s cubic-bezier(0.9, 0.13, 0.28, 0.76);
+          -moz-transition: height 2.5s cubic-bezier(0.9, 0.13, 0.28, 0.76);
+          -o-transition: height 2.5s cubic-bezier(0.9, 0.13, 0.28, 0.76); }
+  .skill-detail-wrapper .skill-detail .skill-wrapper {
+    position: static; }
+    .skill-detail-wrapper .skill-detail .skill-wrapper .bar {
+      background-color: #00D646;
+      cursor: auto; }
+
 @media only screen and (min-width: 840px) {
   /* Styles for desktop only */
-  .skill-wrapper {
-    margin: 30px auto; }
-    .skill-wrapper .skill-name {
-      width: 15%; }
-    .skill-wrapper .skill-value {
-      width: 88%;
-      padding: 0 25px; }
-      .skill-wrapper .skill-value .progress-bar {
-        max-width: 90%; }
-        .skill-wrapper .skill-value .progress-bar .bar .skill-percentage {
-          margin-right: -55px; } }
+  .skill-container {
+    margin: 20px auto; }
+  .skill-wrapper .skill-name {
+    width: 15%; }
+  .skill-wrapper .skill-value {
+    width: 88%;
+    padding: 0 25px; }
+    .skill-wrapper .skill-value .progress-bar {
+      max-width: 90%; }
+      .skill-wrapper .skill-value .progress-bar .bar .skill-percentage {
+        margin-right: -55px; } }
 
 @media only screen and (min-width: 600px) and (max-width: 839px) {
   /* Styles for tablet only */
-  .skill-wrapper {
+  .skill-container {
     margin: 20px auto; }
-    .skill-wrapper .skill-name {
-      width: 20%; }
-    .skill-wrapper .skill-value {
-      width: 80%;
-      padding: 0 25px; }
-      .skill-wrapper .skill-value .progress-bar .bar .skill-percentage {
-        margin-right: -45px; } }
+  .skill-wrapper .skill-name {
+    width: 20%; }
+  .skill-wrapper .skill-value {
+    width: 80%;
+    padding: 0 25px; }
+    .skill-wrapper .skill-value .progress-bar .bar .skill-percentage {
+      margin-right: -45px; } }
 
 @media only screen and (max-width: 599px) {
   /* Styles for mobile only */
-  .skill-wrapper {
+  .skill-container {
     margin: 20px auto; }
-    .skill-wrapper .skill-name {
-      width: 25%; }
-    .skill-wrapper .skill-value {
-      width: 75%;
-      padding: 0 35px; }
-      .skill-wrapper .skill-value .progress-bar .bar .skill-percentage {
-        margin-right: -40px; } }
+  .skill-wrapper .skill-name {
+    width: 25%; }
+  .skill-wrapper .skill-value {
+    width: 75%;
+    padding: 0 35px; }
+    .skill-wrapper .skill-value .progress-bar .bar .skill-percentage {
+      margin-right: -40px; } }
+
+.work-card {
+  display: inline; }
+  .work-card .img-background {
+    max-width: 33%;
+    width: 250px;
+    height: 250px; }
