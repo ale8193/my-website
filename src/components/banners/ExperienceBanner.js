@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ExperienceTimeline from './ExperienceTimeline';
 
 export default class ExperienceBanner extends Component {
     render() {
@@ -11,7 +12,9 @@ export default class ExperienceBanner extends Component {
                                 <span className="text-color-25">03</span> experience
                             </h3>
                         </div>
-                        <div className="banner-body text-center" />
+                        <div className="banner-body text-center" >
+                            <ExperienceTimeline />
+                        </div>
                     </div>
                 </div>
             </div>

@@ -249,3 +249,48 @@ export const portfolio = {
         }
     ]
 };
+
+export const experience = {
+    experience: [
+        {
+            _id: 1,
+            title: 'Alma Mater Studiorum',
+            where: 'Bologna',
+            task: 'It Engineering Student',
+            description: '',
+            from: '2017',
+            to: null,
+            current: true
+        },
+        {
+            _id: 2,
+            title: '3Tech Group S.r.l.',
+            where: 'Ancona',
+            task: 'Web Developer',
+            description: 'Sviluppatore web addetto alla realizzazione di applicazioni web e mobile a livello di grafica e di backend (sistemi informativi, edp',
+            from: '2016',
+            to: '2017',
+            current: false
+        },
+        {
+            _id: 3,
+            title: 'UNIVPM',
+            where: 'Ancona',
+            task: 'Degree in IT Engineering',
+            description: '97/110',
+            from: '2012',
+            to: '2017',
+            current: false
+        },
+        {
+            _id: 4,
+            title: 'Test',
+            where: 'Anywhere',
+            task: 'My task',
+            description: 'Description task',
+            from: '2010',
+            to: '2012',
+            current: false
+        }
+    ]
+};
