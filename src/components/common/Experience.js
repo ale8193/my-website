@@ -6,8 +6,8 @@ export default class Experience extends Component {
         const fromTo = experience.from + '-' + experience.current ? 'TODAY' : experience.to;
 
         return (
-            <div class={`container ${side}`}>
-                <div class="content">
+            <div className={`container ${side}`}>
+                <div className="content">
                     <h5 className="from-to">{fromTo}</h5>
                     <h2 className="title">{experience.title}</h2>
                     <h2 className="where">{experience.where}</h2>

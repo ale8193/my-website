@@ -10,7 +10,7 @@ export default class ExperienceTimeline extends Component {
 
         return (
             <div className="experience-timeline-container">
-                <div class="timeline">
+                <div className="timeline">
                     {experiences}
                 </div>
             </div>
